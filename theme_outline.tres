@@ -5,6 +5,9 @@
 
 [resource]
 Toolbar_PlayButton/base_type = &"Button"
+Toolbar_PlayButton/colors/font_color = Color(1, 1, 0.776471, 1)
 Toolbar_PlayButton/icons/icon = ExtResource("1_xbxy4")
 Toolbar_SearchBox/base_type = &"LineEdit"
+Toolbar_SearchBox/colors/font_color = Color(1, 1, 0.776471, 1)
+Toolbar_SearchBox/colors/font_placeholder_color = Color(1, 1, 0.776471, 1)
 Toolbar_SearchBox/icons/right_icon = ExtResource("2_cs0ik")
