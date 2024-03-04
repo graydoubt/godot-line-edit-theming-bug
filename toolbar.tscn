@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://0c5n5es5wrfy"]
+
+[node name="Toolbar" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"Toolbar_PlayButton"
+text = "Play"
+
+[node name="SearchBox" type="LineEdit" parent="HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"Toolbar_SearchBox"
+placeholder_text = "Search"
+clear_button_enabled = true

@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://ckmqvp2o5ygw8"]
+
+[ext_resource type="Texture2D" uid="uid://leafc014wcdb" path="res://icons/solid/play-circle.svg" id="1_kxq2b"]
+[ext_resource type="Texture2D" uid="uid://c8l5ciecj8t6t" path="res://icons/solid/magnifying-glass-circle.svg" id="2_goo01"]
+
+[resource]
+Toolbar_PlayButton/base_type = &"Button"
+Toolbar_PlayButton/icons/icon = ExtResource("1_kxq2b")
+Toolbar_SearchBox/base_type = &"LineEdit"
+Toolbar_SearchBox/icons/right_icon = ExtResource("2_goo01")

@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://v4pojk5u5n2"]
+
+[ext_resource type="PackedScene" uid="uid://0c5n5es5wrfy" path="res://toolbar.tscn" id="1_kmk35"]
+[ext_resource type="Theme" uid="uid://opmvcu2wyne" path="res://theme_outline.tres" id="2_6jgo3"]
+[ext_resource type="Theme" uid="uid://ckmqvp2o5ygw8" path="res://theme_solid.tres" id="2_j677h"]
+[ext_resource type="Texture2D" uid="uid://leafc014wcdb" path="res://icons/solid/play-circle.svg" id="4_hl3f1"]
+[ext_resource type="Texture2D" uid="uid://dv4i8x436gleo" path="res://icons/outline/play-circle.svg" id="4_i3jcm"]
+[ext_resource type="Texture2D" uid="uid://dr8c1mnfv558o" path="res://icons/outline/magnifying-glass-circle.svg" id="5_cj648"]
+[ext_resource type="Texture2D" uid="uid://c8l5ciecj8t6t" path="res://icons/solid/magnifying-glass-circle.svg" id="7_vubuv"]
+
+[node name="Main" type="CanvasLayer"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -20.0
+offset_right = 142.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="HBoxContainerTop" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="OutlineToolbar" parent="CenterContainer/VBoxContainer/HBoxContainerTop" instance=ExtResource("1_kmk35")]
+layout_mode = 2
+theme = ExtResource("2_6jgo3")
+
+[node name="SolidToolbar" parent="CenterContainer/VBoxContainer/HBoxContainerTop" instance=ExtResource("1_kmk35")]
+layout_mode = 2
+theme = ExtResource("2_j677h")
+
+[node name="HBoxContainerBottom" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="OutlineToolbarViaEditableChildren" parent="CenterContainer/VBoxContainer/HBoxContainerBottom" instance=ExtResource("1_kmk35")]
+layout_mode = 2
+
+[node name="PlayButton" parent="CenterContainer/VBoxContainer/HBoxContainerBottom/OutlineToolbarViaEditableChildren/HBoxContainer" index="0"]
+icon = ExtResource("4_i3jcm")
+
+[node name="SearchBox" parent="CenterContainer/VBoxContainer/HBoxContainerBottom/OutlineToolbarViaEditableChildren/HBoxContainer" index="1"]
+right_icon = ExtResource("5_cj648")
+
+[node name="SolidToolbarViaEditableChildren" parent="CenterContainer/VBoxContainer/HBoxContainerBottom" instance=ExtResource("1_kmk35")]
+layout_mode = 2
+
+[node name="PlayButton" parent="CenterContainer/VBoxContainer/HBoxContainerBottom/SolidToolbarViaEditableChildren/HBoxContainer" index="0"]
+icon = ExtResource("4_hl3f1")
+
+[node name="SearchBox" parent="CenterContainer/VBoxContainer/HBoxContainerBottom/SolidToolbarViaEditableChildren/HBoxContainer" index="1"]
+right_icon = ExtResource("7_vubuv")
+
+[editable path="CenterContainer/VBoxContainer/HBoxContainerBottom/OutlineToolbarViaEditableChildren"]
+[editable path="CenterContainer/VBoxContainer/HBoxContainerBottom/SolidToolbarViaEditableChildren"]
